@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<title>Create New User</title>
+<title>[[${pageTitle}]]</title>
 <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
@@ -59,10 +59,11 @@
 			</nav>
 		</div>
 		<div>
-			<h2>Manage Users | Create New User</h2>
+			<h2>Manage Users | [[${pageTitle}]]</h2>
 		</div>
 		
-		<form th:action="@{/users/save}" method="post" style="max-width: 800px;margin: 0 auto" th:object="${user}" onsubmit="return checkEmailUnique(this)">
+		<form th:action="@{/users/save}" method="post" style="max-width: 800px;margin: 0 auto" 
+			th:object="${user}" onsubmit="return checkEmailUnique(this)">
 			<div class="border border-secondary rounded p-3">
 				<div class="form-group row">
 					<label class="col-sm-4 col-form-label">E-mail :</label>
